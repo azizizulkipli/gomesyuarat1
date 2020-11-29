@@ -2,7 +2,7 @@ export default {
     generateRandomString() {
         const crypto = window.crypto || window.msCrypto;
         let array = new Uint32Array(1);
-        
+
         return crypto.getRandomValues(array);
     },
 
@@ -109,19 +109,7 @@ export default {
 
     getIceServer() {
         return {
-            iceServers: [
-                {
-                    urls: ["stun:eu-turn4.xirsys.com"]
-                },
-                {
-                    username: "ml0jh0qMKZKd9P_9C0UIBY2G0nSQMCFBUXGlk6IXDJf8G2uiCymg9WwbEJTMwVeiAAAAAF2__hNSaW5vbGVl",
-                    credential: "4dd454a6-feee-11e9-b185-6adcafebbb45",
-                    urls: [
-                        "turn:eu-turn4.xirsys.com:80?transport=udp",
-                        "turn:eu-turn4.xirsys.com:3478?transport=tcp"
-                    ]
-                }
-            ]
+            iceServers: [{   urls: [ "stun:ss-turn1.xirsys.com" ]}, {   username: "76BLIvIslzK-9dUtI9IaJfnSTFw0unJpLWbpfoffrHH5jfbKMVDtL0VtJGo5h3tlAAAAAF_DUqNheml6aXp1bGtpcGxpMnU=",   credential: "78a6254e-3217-11eb-8aed-0242ac140004",   urls: [       "turn:ss-turn1.xirsys.com:80?transport=udp",       "turn:ss-turn1.xirsys.com:3478?transport=udp",       "turn:ss-turn1.xirsys.com:80?transport=tcp",       "turn:ss-turn1.xirsys.com:3478?transport=tcp",       "turns:ss-turn1.xirsys.com:443?transport=tcp",       "turns:ss-turn1.xirsys.com:5349?transport=tcp"   ]}]
         };
     },
 
